@@ -1,17 +1,20 @@
-import React, {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {loginAction} from "../../redux/actions/actions";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserAction, loginAction } from "../../redux/actions/actions";
 import AuthBackground from "./AuthBackground";
-import "./LoginScreen.css";
 
 export default function LoginScreen() {
-    const state = useSelector(state => state?.auth?.login);
+    const loginState = useSelector(state => state.auth?.login);
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        if (state?.data?.token) {
-            getAuthed(state.data.token)
+        if (loginState?.data?.token) {
+            getAuthed(loginState.data.token)
         }
-    }, [state])
+    }, [loginState])
+
+
 
     useEffect(() => {
         // dispatch(loginAction())

@@ -4,7 +4,7 @@ import auth from './auth';
 
 
 const appReducer = combineReducers({
-    reducers: reducers,
+    app: reducers,
     auth: auth,
 });
 
