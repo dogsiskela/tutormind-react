@@ -1,0 +1,41 @@
+.register-user {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.register-user-main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+    column-gap: 1vw;
+}
+
+select {
+    width: 46%;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+}
+
+.icon {
+    font-size: 6vh;
+}

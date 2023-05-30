@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserAction, loginAction } from "../../redux/actions/actions";
+import AuthBackground from "./AuthBackground";
 
 export default function LoginScreen() {
     const loginState = useSelector(state => state.auth?.login);
@@ -39,8 +40,26 @@ export default function LoginScreen() {
     }
 
     return (
-        <div>
-            Login Screen
+        <div className="login">
+            <div className="login-main">
+                <form className="login-form">
+                    <div className="label-input">
+                        <label htmlFor="username" className="form-label">Username</label>
+                        <input id="username" type="text" className="form-control"/>
+                        {/*</div>*/}
+                        {/*<div className="label-input">*/}
+                        <label htmlFor="password" className="form-label">Password</label>
+                        <input id="password" type="password" className="form-control"/>
+                        {/*</div>*/}
+                        <div className="form-check">
+                            <label htmlFor="rememberMe" className="form-check-label">Remember me</label>
+                            <input id="rememberMe" type="checkbox" className="form-check-input"/>
+                        </div>
+                    </div>
+                    <button type="submit" className="btn btn-warning">LOGIN</button>
+                </form>
+            </div>
+            <AuthBackground text={"TUTORMIND"} screenWidthPct={50}></AuthBackground>
         </div>
     )
 }
