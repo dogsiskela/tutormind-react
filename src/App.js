@@ -5,6 +5,7 @@ import LoginScreen from './screens/LoginScreen/LoginScreen';
 import RegisterUser from "./screens/Register/RegisterUser";
 import RegisterProfessor from "./screens/Register/RegisterProfessor";
 import {Route, Routes} from 'react-router-dom';
+import ProfileScreen from 'screens/ProfileScreen/ProfileScreen';
 
 
 function App() {

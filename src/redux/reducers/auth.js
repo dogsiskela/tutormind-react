@@ -6,6 +6,9 @@ export default (state, action) => {
         case actionTypes.LOGIN:
             return { ...state, login: action.payload }
 
+        case actionTypes.REGISTER:
+            return { ...state, register: action.payload }
+
         default:
             return null;
     }
