@@ -1,0 +1,43 @@
+.backdrop {
+    display: flex;
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.logo {
+    width: 50%;
+}
+
+.landing-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-auth {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 0.7vh;
+    flex-direction: row;
+    margin-top: 2vh;
+    margin-right: 2vh;
+}
+
+.landing-main {
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+h3 {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
