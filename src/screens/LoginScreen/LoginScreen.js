@@ -17,6 +17,7 @@ export default function LoginScreen() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        console.log(loginState)
         if (loginState?.status === 200) {
             // getAuthed(loginState.data.token)
             navigate('/dashboard')
@@ -24,25 +25,6 @@ export default function LoginScreen() {
     }, [loginState])
 
 
-
-    const getAuthed = async (token) => {
-        let res = await fetch("http://localhost:9091/api/user/validate", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + token
-            }
-        }).catch(e => {
-            return null;
-        })
-        if (res) {
-            let j = await res.json();
-            console.log(j)
-            return j;
-        }
-        return null;
-
-    }
 
     return (
         <div className="login">

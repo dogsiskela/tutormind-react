@@ -10,6 +10,6 @@ export default (state, action) => {
             return { ...state, register: action.payload }
 
         default:
-            return null;
+            return { ...state };;
     }
 };

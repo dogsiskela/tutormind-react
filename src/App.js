@@ -6,6 +6,8 @@ import RegisterUser from "./screens/Register/RegisterUser";
 import RegisterProfessor from "./screens/Register/RegisterProfessor";
 import {Route, Routes} from 'react-router-dom';
 import ProfileScreen from 'screens/ProfileScreen/ProfileScreen';
+import Dashboard from 'screens/Dashboard/Dashboard';
+import CreateCourse from 'screens/CreateCourse/CreateCourse';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
                 <Route path="profile/:username" element={<ProfileScreen />} />
                 <Route path="register/user" element={<RegisterUser/>}/>
                 <Route path="register/professor" element={<RegisterProfessor/>}/>
+                <Route path="dashboard" element={<Dashboard/>}/>
+                <Route path="courses/create" element={<CreateCourse/>}/>
             </Routes>
         </div>
     )

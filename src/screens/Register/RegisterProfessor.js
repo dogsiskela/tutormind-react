@@ -5,7 +5,7 @@ import { FaMailBulk } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
-import { registerAction } from 'redux/actions/actions';
+import { registerAction, resetRegisterAction } from 'redux/actions/actions';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -29,17 +29,15 @@ export default function RegisterUser() {
             repeatPassword: confPassword,
             name: name,
             surname: surname,
-            role: 'ROLE_USER'
+            role: 'ROLE_TEACHER'
         }))
     }
-
     useEffect(() => {
         if (registerState?.status == 200) {
+            dispatch(resetRegisterAction())
             navigate('/login')
         }
-        console.log(registerState)
     }, [registerState])
-
 
     return (
         <div className="register-user">
